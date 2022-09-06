@@ -7,6 +7,8 @@
     }
     &__how {
     }
+    &__pathway {
+	}
 }
 
 .title {
@@ -30,6 +32,7 @@
 //=========================================================================//
 .image-block {
     display: flex;
+    align-self: start;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.05);
     border-radius: rem(20);
@@ -41,19 +44,19 @@
 
     &__circle {
         position: absolute;
-        width: 100%;
-        height: 100%;
         top: 0;
-        left: 0;
+        right: 0;
+        @include adaptiveValue("width", 585, 350);
+        @include adaptiveValue("height", 585, 350);
         &::before {
             content: "";
+            width: 100%;
+            height: 100%;
             position: absolute;
             border-radius: 50%;
             border: 1px solid #fff;
-            @include adaptiveValue("width", 585, 350);
-            @include adaptiveValue("height", 585, 350);
             top: 0;
-            right: 0;
+            left: 0;
         }
         &_1 {
             &::before {
