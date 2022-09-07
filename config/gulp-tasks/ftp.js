@@ -2,6 +2,7 @@ import { configFTP } from '../gulp-settings.js';
 import vinylFTP from 'vinyl-ftp';
 import util from 'gulp-util';
 
+
 export const ftp = () => {
 	configFTP.log = util.log;
 	const ftpConnect = vinylFTP.create(configFTP);
